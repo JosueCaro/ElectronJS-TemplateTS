@@ -12,7 +12,6 @@ export default class Main {
     }
 
     private static onClose() {
-        // Dereference the window object. 
         Main.mainWindow = null;
     }
 
