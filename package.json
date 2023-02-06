@@ -1,0 +1,22 @@
+{
+  "name": "template-app",
+  "version": "1.0.0",
+  "description": "Template de aplicación de escritorio con Electron con Typescript | Universidad de La Salle Bajío",
+  "main": "main.js",
+  "scripts": {
+    "start": "npm run build && electron dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf dist/",
+    "build": "npm run copy && ./node_modules/.bin/tsc",
+    "copy":  "copyfiles -u 1 \"src/**/*\" -e \"src/**/*.ts\" dist"
+  },
+  "author": "Escribe tu nombre aquí",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "copyfiles": "^2.4.1",
+    "electron": "^22.2.0",
+    "rimraf": "^4.1.2",
+    "typescript": "^4.9.5"
+  }
+}
