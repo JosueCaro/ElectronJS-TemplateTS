@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf dist/",
     "build": "npm run copy && ./node_modules/.bin/tsc",
-    "copy":  "copyfiles -u 1 \"src/**/*\" -e \"src/**/*.ts\" dist"
+    "copy":  "copyfiles -u 1 \"src/**/*\" -e \"src/**/*.ts\" dist",
+    "watch": "npm run build && nodemon -e ts,html,css -x \"npm run build\""
   },
   "author": "Escribe tu nombre aquí",
   "license": "ISC",
@@ -17,6 +18,11 @@
     "copyfiles": "^2.4.1",
     "electron": "^22.2.0",
     "rimraf": "^4.1.2",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "nodemon": "^2.0.20"
+  },
+    "nodemonConfig": {
+    "ignore": ["**/dist/**"],
+    "delay": 2500
   }
 }
