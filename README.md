@@ -79,7 +79,7 @@ npm start
 ```
 
 
-## Package con bundler (window)
+## Package con bundler (Windows)
 
 ```json
 
